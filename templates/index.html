@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARS INFO</title>
+    
+
+    <style>
+        #head{
+            padding:10px ;
+            font-size: 35px;
+            background-color: #023047;
+            text-align: center;
+            color: #e76f51;
+        }
+        #container{
+            align-items: center;
+            padding: 10px;
+            background-color: #8ecae6;
+            height: 300px;
+            color: #ffb703;
+        }
+        #form {
+            background-color: #2a9d8f;
+            margin-top: 7px;
+            margin-left: 1px;
+            font-size: 20px;
+            border: 5px solid #023047;
+            border-radius: 25px;
+            padding: 10px;
+}
+        #name{
+            width:300px;
+        }
+        #sb{
+            width:100px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 20px;
+            border: 5px solid rgb(7, 8, 7);
+            border-radius: none;
+            background-color:#ffb703;
+        }
+        #sb:hover{
+            cursor: pointer;
+            background-color: rgb(181, 187, 192);
+        }
+        #image{
+            margin-top: 20px;
+        }
+        hr{
+            border-top: 20px solid #2a9d8f;
+        }
+        #animation{
+            height: 353px;
+    /* border: 5px solid; */
+            width: 565px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+      
+       
+    </style>
+</head>
+
+<body>
+    <div id="head"></div>
+    <div id="container">
+        <form action="{{url_for('fetch')}}" method="POST" id="form" enctype="multipart/form-data" > 
+            <h1 id="heading center"><u>CARS INFO</u> </h1>
+            NAME: <input type="text" id="name" placeholder="please enter your name">
+            </br>
+            file uploads <input type="file" name="file" id="fi">
+            </br>
+            <input type="submit" value="SUBMIT" id="sb">
+        </form>
+        <p><h4 class="typewriter" style="color:black">A Machine learning model that will extract images from videos and predict the number plate
+        and then using RTO API gives the information about the cars</h4> </p>
+    </div>
+    <hr>
+    
+    <div id="animation">
+        <img src="static/abcd.gif" alt="moving cars">
+
+    </div>
+</body>
+
+</html>

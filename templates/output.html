@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head {
+            padding: 10px;
+            font-size: 35px;
+            background-color: #264653;
+            text-align: center;
+            color: rgb(221, 212, 212);
+        }
+        #container{
+            text-align: center;
+            padding: 10px;
+            background: center/cover no-repeat url("/static/gif-1.gif");
+            height: 700px;
+            color: black;
+            border: 3px solid #023047
+        }
+        .table{
+             margin-top: 50px; 
+             margin-left: 150px; 
+            border: 2px solid black;
+            font-size: 20px;
+            color: solid rgb(24, 226, 216);
+            background-color: #b7b7a4;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="head">DETAILS OF CAR</div>
+    <div id="container">
+        <table class="table" id="ta">
+            <tbody>
+
+                <thead>
+                    <td><b>Parameter</b>  </td>
+                    <td> <b>value</b> </td>
+                </thead>
+            {% for key,val in dt.items() %}
+                <tr>
+                    <td> {{ key }} </td>
+                    <td> {{ val }} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>
